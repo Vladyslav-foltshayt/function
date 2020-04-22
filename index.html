@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Функції</title>
+  
+   
+    <script src="script.js"></script>
+    
+
+
+<body>
+<h1>Лабораторна робота функції
+</h1>
+<pre>
+    В JavaScript функція є значенням, таким же як рядок або число.
+
+    Function Declaration - функція, оголошена в основному потоці коду.
+Function Expression - оголошення функції в контексті будь-якого виразу, наприклад присвоювання.
+
+// Function Declaration
+function sum(a, b) {
+  return a + b;
+}
+
+// Function Expression
+var sum = function(a, b) {
+  return a + b;
+}
+
+Основна відмінність між ними: функція, оголошена як Function Declaration, створюються інтерпретатором до виконання коду.
+
+Тому їх можна викликати до оголошення, наприклад:
+
+sayHi ( "Вася"); // Привіт Вася
+
+function sayHi (name) {
+  alert ( "Привіт," + name);
+}
+
+Це через те, що JavaScript перед запуском коду шукає в ньому Function Declaration
+
+
+
+Також Function Expression можна вкладувати внутрі блока керуючого оператора
+var age = prompt('Скільки вам років?');
+
+var sayHi;
+
+if (age >= 18) {
+  sayHi = function() {
+    alert( 'Ви можете дивитись даний фільм' );
+  }
+</pre>
+</body>
+</html>
